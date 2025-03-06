@@ -42,9 +42,10 @@
 
 .medals {
   display: flex;
-  gap: 1rem; /* space between the cards */
-  flex-wrap: wrap; /* allows cards to wrap to the next line if they don’t fit */
-  padding: 1rem; /* optional padding around the entire container */
+  gap: 1rem; 
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
 }
 
 .country-card {
@@ -52,9 +53,9 @@
   border-radius: 8px;
   padding: 1rem;
   background-color: #f9f9f9;
-  width: 200px; /* sets a consistent card size */
+  width: 200px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* adds a subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -76,6 +77,14 @@
 
 .pb-1 {
   padding-bottom: .5rem;
+}
+
+.pt-1 {
+  padding-top: .5rem;
+}
+
+.mt-1 {
+  margin-top: .5rem;
 }
 
 .border-bottom {

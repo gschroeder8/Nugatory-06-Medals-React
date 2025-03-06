@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import Medal from './Medals';
+import React, { useState } from "react";
+import Medals from "./Medals";
 
-function Country({ country, medals, onDelete }) {
+function Country({ country, deleteCountry }) {
+  const [gold, setGold] = useState(country.gold);
+  const [silver, setSilver] = useState(country.silver);
+  const [bronze, setBronze] = useState(country.bronze);
+
   return (
-    <div className="country-card">
-      <h2 className="border-bottom pb-1">{country.name}</h2>
-      <div>
-        {medals.map(medal => (
-          <Medal key={medal.id} medal={medal} />
-        ))}
-      </div>
-      <button className="mb-1" onClick={() => onDelete(country.id)}>🗑️</button>
+    <div className="country">
+      <h2>{country.name}</h2>
+      <Medals type="Gold" count={gold} setCount={setGold} />
+      <Medals type="Silver" count={silver} setCount={setSilver} />
+      <Medals type="Bronze" count={bronze} setCount={setBronze} />
+      <button onClick={() => deleteCountry(country.id)}>Delete</button>
     </div>
   );
 }

@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Nugatory-03-Medals-React',
+  base: '/Nugatory-06-Medals-React',
   plugins: [react()],
 })
